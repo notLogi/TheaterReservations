@@ -12,6 +12,10 @@ public class TheaterReservations {
         LocalDate ticketDate = setDate(myScanner);
         //System.out.println(ticketDate);
         int numberOfTickets = setTickets(myScanner);
+        if (numberOfTickets < 1){
+            System.out.println("Invalid amount of tickets");
+            System.exit(0);
+        }
         purchaseSummary(name, ticketDate, numberOfTickets);
     }
     public static String setName(Scanner scanner) {
