@@ -17,6 +17,7 @@ public class TheaterReservations {
             System.exit(0);
         }
         purchaseSummary(name, ticketDate, numberOfTickets);
+        myScanner.close();
     }
     public static String setName(Scanner scanner) {
         System.out.println("Please enter your name: ");
