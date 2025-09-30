@@ -19,11 +19,9 @@ public class TheaterReservations {
         purchaseSummary(name, ticketDate, numberOfTickets);
     }
     public static String setName(Scanner scanner) {
-        System.out.println("Enter first name: ");
+        System.out.println("Please enter your name: ");
         String firstName = scanner.nextLine();
-        System.out.println("Enter last name: ");
-        String lastName = scanner.nextLine();
-        return lastName + ", " + firstName;
+        return firstName.substring(firstName.lastIndexOf(" ")) + ", " + firstName.substring(0, firstName.indexOf(" "));
     }
     public static LocalDate setDate(Scanner scanner){
         System.out.println("What date will you be coming(MM/dd/yyyy): ");
@@ -38,6 +36,6 @@ public class TheaterReservations {
     }
     public static void purchaseSummary(String name, LocalDate date, int tickets){
         String ticketsPlural = tickets > 1 ? " tickets " : " ticket ";
-        System.out.println(tickets + ticketsPlural + "reserved for " + date + " under " + name);
+        System.out.println(tickets + ticketsPlural + "reserved for " + date + " under" + name);
     }
 }
